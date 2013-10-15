@@ -2,7 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// COLORS 
 $primary-color: #0EBFE9;
+
+// MIXINS
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
 
 h1, h2, h3, h4, h5 { 
 	color: $primary-color; 
@@ -26,11 +36,14 @@ article {
 	}
 
 	time {
-		font {
+		font: {
 			weight: bold;
 			family: Verdana, Geneva, sans-serif;
 			size: 0.8em;
 		}
+		padding: 4px;
+		border: 2px solid darken($primary-color, 10%);
+		@include border-radius(5px);
 	}
 
 	.body {
