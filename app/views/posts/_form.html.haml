@@ -1,19 +1,7 @@
-= form_for @post do |f|
-  - if @post.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
-      %ul
-        - @post.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :date
-    = f.datetime_select :date
-  .field
-    = f.label :body
-    = f.text_area :body, size: "80x100"
-  .actions
-    = f.submit 'Save'
+.row
+  .large-4.large-centered.columns
+    = simple_form_for @post do |f|
+      = f.input :title, label: 'Blog Post Title'
+      = f.input :date
+      = f.input :body, size: "80x100"
+      = f.button :submit

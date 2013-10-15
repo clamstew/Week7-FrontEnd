@@ -1,7 +1,7 @@
 %h1 My blog
 
-- @posts.each do |post|
-  .post-preview
-    %h2= link_to(post.title, post)
-
-    %p= post.body.truncate(75)
+.large-8.large-centered.columns
+  - @posts.each do |post|
+    .post-preview
+      %h2= link_to(post.title, post)
+      %p= post.body.truncate(75)
