@@ -19,3 +19,21 @@ a, a:visited {
 		text-decoration: underline;
 	}
 }
+
+article {
+	h1.title {
+		font-style: italic;
+	}
+
+	time {
+		font {
+			weight: bold;
+			family: Verdana, Geneva, sans-serif;
+			size: 0.8em;
+		}
+	}
+
+	.body {
+		p { line-height: 1.5em; }
+	}
+}
