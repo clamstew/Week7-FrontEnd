@@ -1,0 +1,11 @@
+<% if @posts.count > 0 %>
+	<ul>
+	    <% @posts.each do |post| %>
+	  <li><%= link_to post.title, 
+	    :action => 'show', :id => post.id  %></li>
+	  <% end %>
+	</ul>
+<% else %>
+	<p>No posts were found. <%= link_to "Go Home", root_path %></p>
+<% end %>
+

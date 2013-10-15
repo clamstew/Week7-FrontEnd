@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
   # GET /posts
   # GET /posts.json
   def index
@@ -10,6 +9,13 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+  end
+
+  def search
+    @posts = Post.where(title: params[:search])
+    # @posts = Post.where('title LIKE ? ' "%#{params[:search]}%")
+
+    redirect_to root_path unless @posts.count > 0
   end
 
   # GET /posts/new
@@ -67,8 +73,9 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :date, :body)
+      params.require(:post).permit(:title, :date, :body, :title_search)
     end
 end

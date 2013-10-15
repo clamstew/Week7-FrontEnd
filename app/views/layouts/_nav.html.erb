@@ -1,0 +1,49 @@
+<nav class="top-bar">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="/">Blurred Press</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider hide-for-small"></li>
+      <li class="has-dropdown"><a href="#">Posts</a>
+
+        <ul class="dropdown">
+          <li><label>Choses Post</label></li>
+          <% @posts.each do |post| %>
+            <li><%= link_to "#{post.title}", post_path(post) %></li>
+          <% end %>
+        </ul>
+      </li>
+      <li class="divider"></li>
+      <li class="has-form">
+          <div class="row collapse">
+            <%= form_tag(search_path) do %>
+              <div class="small-8 columns">
+                
+                <!-- <input type="text" name="title_search"> -->
+                <%= text_field_tag :search, params[:search] %>
+              </div>
+              <div class="small-4 columns">
+                <!-- <a href="#" class="alert button">Search</a> -->
+                <%#= button_to "Search", search_path(params[:title_search]), class: "alert button" %>
+                <%#= f.submit 'Search', class: "alert button", method: :post %>
+                <%= submit_tag "Search", :name => nil, class: "alert button" %> 
+              </div>
+            <% end %>
+          </div>
+      </li>
+      <li class="divider show-for-small"></li>
+      <li class="has-form">
+        <%= link_to 'New Post', new_post_path, class: 'button' %>
+      </li>
+    </ul>
+  </section>
+</nav>
