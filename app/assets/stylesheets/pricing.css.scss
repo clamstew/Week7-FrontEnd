@@ -1,13 +1,13 @@
-@media all and (max-width: 420px) {
+@media all and (max-width: 767px) {
 	.plan {
-		img {display:none;}
+		// img {display:none;} // this was replaced by .hide-for-small
 		height: auto;
 		margin-bottom: 1em;
 		padding: 0.5em;
 	}
 }
 
-@media all and (min-width: 420px) {
+@media all and (min-width: 767px) {
 	.plan {
 		height: 500px;
 	}
