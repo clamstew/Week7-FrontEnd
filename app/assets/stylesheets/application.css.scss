@@ -9,8 +9,9 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require normalize
+ *= require foundation
  *= require_self
- *= require_tree .
+ *= require pricing
  */
 
 @import 'compass/css3/border-radius';
@@ -43,7 +44,7 @@ h1, h2 {
   margin-bottom: 50px;
 
   .plan {
-    height: 500px;
+
     background-color: white;
     border-radius: 5px;
     color: #2c3e50;

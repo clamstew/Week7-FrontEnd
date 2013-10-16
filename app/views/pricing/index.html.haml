@@ -1,49 +1,53 @@
-%h1 Start your free 30 day trial!
+%div.large-12.columns
+  %h1 Start your free 30 day trial!
+  %h2 No credit card, contract, or brain required
 
-%h2 No credit card, contract, or brain required
+%div.large-12.columns
+  .container
+    .large-4.columns
+      .plan.personal
+        %h3 Personal
 
-.container
-  .plan.personal
-    %h3 Personal
+        .price $9
 
-    .price $9
+        = image_tag 'http://placehold.it/280x150'
 
-    = image_tag 'http://placehold.it/280x150'
+        %ul
+          %li 2 GB storage
+          %li 30 uploads / month
+          %li Unlimited downloads
+          %li Email support
 
-    %ul
-      %li 2 GB storage
-      %li 30 uploads / month
-      %li Unlimited downloads
-      %li Email support
+        .start-button Start trial
+    
+    .large-4.columns
+      .plan.premium
+        %h3 Premium
 
-    .start-button Start trial
+        .price $29
 
-  .plan.premium
-    %h3 Premium
+        = image_tag 'http://placehold.it/280x150'
 
-    .price $29
+        %ul
+          %li 5 GB storage
+          %li 60 uploads / month
+          %li Unlimited downloads
+          %li Chat support
 
-    = image_tag 'http://placehold.it/280x150'
+        .start-button Start trial
 
-    %ul
-      %li 5 GB storage
-      %li 60 uploads / month
-      %li Unlimited downloads
-      %li Chat support
+    .large-4.columns
+      .plan.enterprise
+        %h3 Enterprise
 
-    .start-button Start trial
+        .price $59
 
-  .plan.enterprise
-    %h3 Enterprise
+        = image_tag 'http://placehold.it/280x150'
 
-    .price $59
+        %ul
+          %li 500 GB storage
+          %li Unlimited uploads
+          %li Unlimited downloads
+          %li Telepathic support
 
-    = image_tag 'http://placehold.it/280x150'
-
-    %ul
-      %li 500 GB storage
-      %li Unlimited uploads
-      %li Unlimited downloads
-      %li Telepathic support
-
-    .start-button Start trial
+        .start-button Start trial

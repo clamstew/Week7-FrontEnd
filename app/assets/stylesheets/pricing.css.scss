@@ -1,64 +1,14 @@
-// Place all the styles related to the pricing controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-img { 
-	max-width: 100%; 
-	display: none;
+@media all and (max-width: 420px) {
+	.plan {
+		img {display:none;}
+		height: auto;
+		margin-bottom: 1em;
+		padding: 0.5em;
+	}
 }
 
-.container {
-  max-width:  960px;
-
-  .plan {
-    float: none;
-    height: 100%;
-    width: auto;
-    margin: 0.5em (30px / 960px * 100%);
-    padding: 1em;
-  }
-	
-	@media all and (min-width: 420px) {	
-	  .plan {
-	    height: 500px;
-	    float: left;
-			width: 300px / 960px * 100%;
-			img {
-				display: block;
-				// margin: 0 (30px / 960px * 100%);
-
-			}
-			margin: 0em;
-			padding: 0em;
-	  }
-
-	  .plan.premium {
-	    margin: 0 (30px / 960px * 100%);
-	  }
-	}
-
-	@media all and (min-width: 420px) and (max-width: 780px) {
-    .plan {
-	    height: 500px;
-	    float: left;
-			width: 300px / 960px * 100%;
-			img {
-				max-width: 100%;
-			}
-			margin: none;
-			padding: none;
-	  }
-
-	  .plan.premium {
-	    margin: 0 (30px / 960px * 100%);
-	  }
-	}
-
-	@media all and (min-width: 920px) {	
-	  .plan {
-	  	img {
-	  		margin: 0 (30px / 960px * 100%);
-	  	}
-		}
+@media all and (min-width: 420px) {
+	.plan {
+		height: 500px;
 	}
 }
