@@ -34,7 +34,8 @@ end
 
 gem 'haml-rails'
 
-gem "compass-rails", "~> 2.0.alpha.0"
+gem "compass-rails"
+gem 'zurb-foundation', '~> 4.0.0'
 
 
 # Use ActiveModel has_secure_password
