@@ -13,6 +13,8 @@ class ContestsController < ApplicationController
     @contest = Contest.find(params[:id])
     new_comment = @contest.comments.build(comment_params)
     new_comment.user_id = current_user.id
+    new_comment.username = current_user.name
+
     # Use the bang to be able to save new_comment as the new saved object and pass it to the json below.
     new_comment.save!
     render :json => new_comment.to_json, :status => 200
@@ -33,7 +35,7 @@ class ContestsController < ApplicationController
 private
 
   def comment_params
-    params.permit(:side, :username, :comment)
+    params.permit(:side, :comment)
   end
 
 end

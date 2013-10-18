@@ -17,11 +17,8 @@
     <div class="comment-wall"></div>
 
     <div class="panel">
-      <h3>Cast Your Vote!</h3>
+      <h3><%= current_user.name %> Cast Your Vote!</h3>
       <form class="new-comment">
-        <label>Username</label>
-        <input name="username" type="text" />
-
         <label>Vote</label>
         <!--  <select name="side">
           <option value="">============Choose a Side============</option>

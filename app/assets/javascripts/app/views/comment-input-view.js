@@ -16,6 +16,7 @@
       // This converts the form's input values into a nice javascript object
       var newCommentData = _.formToJSON(this.el);
       console.log('New comment data:', newCommentData);
+      newCommentData.username = g.user.username;
 
       // Adds our new comment to the collection
       this.collection.create(newCommentData);
