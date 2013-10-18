@@ -23,11 +23,13 @@
         <input name="username" type="text" />
 
         <label>Vote</label>
-        <select name="side">
+        <!--  <select name="side">
+          <option value="">============Choose a Side============</option>
           <option value="left">Left Side</option>
           <option value="right">Right Side</option>
-        </select>
-
+        </select> -->
+        <input type="radio" name="side" value="left"/>Left Side
+        <input type="radio" name="side" value="right"/>Right Side
         <label>Comment</label>
         <textarea name="comment"></textarea>
 
@@ -71,7 +73,7 @@
   });
 
   wall.add(<%= raw @contest.comments.to_json %>);
-
+  console.log(<%= raw @contest.comments.to_json %>);
 
   /* *
    * Lesson Step: The New Comment Form
