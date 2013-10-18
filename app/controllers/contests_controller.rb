@@ -20,6 +20,7 @@ class ContestsController < ApplicationController
     ).first
 
     # TODO: Destroy the comment
+    @comment.destroy
 
     render :nothing => true, :status => 200
   end
